@@ -1,0 +1,17 @@
+.header{
+    width: auto;
+    text-align: center;
+    padding: 1rem;
+    &__logo-titre{
+        width: 10rem;
+    }
+    &__logo-retour{
+        width: 1rem;
+    }
+    &--grid{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        text-align: left;
+        align-items: center;
+    }
+}
