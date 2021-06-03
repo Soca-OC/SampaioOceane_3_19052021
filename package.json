@@ -17,6 +17,8 @@
   "bugs": {
     "url": "https://github.com/Soca-OC/SampaioOceane_3_19052021/issues"
   },
-  "homepage": "https://github.com/Soca-OC/SampaioOceane_3_19052021#readme"
-  
+  "homepage": "https://github.com/Soca-OC/SampaioOceane_3_19052021#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }

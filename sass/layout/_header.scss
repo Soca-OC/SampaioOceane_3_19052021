@@ -1,9 +1,10 @@
 .header{
     width: auto;
     text-align: center;
-    padding: 1rem;
+    padding: 0.5rem;
     &__logo-titre{
-        width: 10rem;
+        width: 9rem;
+        padding-top: 0.5rem;
     }
     &__logo-retour{
         width: 1rem;

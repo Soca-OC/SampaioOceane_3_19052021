@@ -1,0 +1,17 @@
+.index{
+    &__recherche-ville{
+        background-color: #e1e1e1;
+        border-top: .2rem solid #cccc;
+        display: flex;
+        justify-content: center;
+    }
+    &__texte-ville{
+        border: none;
+        background: #e1e1e1;
+        width: 6rem;
+    }
+    &__logo-point-map{
+        width:.8rem;
+        padding: .8rem;
+    }
+}

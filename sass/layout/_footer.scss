@@ -1,3 +1,29 @@
 .footer{
     background-color: #282c34;
+    position: absolute;
+    width:  -moz-available;
+    @include padding-gauche-base;
+    color: $couleur-texte-fond-fonce;
+    font-size: 1rem;
+    font-weight: initial;
+    &__titre{
+        font-family: $titre;
+    }
+    &__liste{
+        list-style: none;
+        padding: 0;
+    }
+    &__liste-element{
+        padding: .25rem 0;
+    }
+    &__liste-logo{
+        height: 0.8rem;
+        width: 0.8rem;
+        padding-right: 0.5rem;
+    }
+    &__liste-texte{ 
+        text-decoration: none;
+        font-family: $texte;
+        color: $couleur-texte-fond-fonce;    
+    }
 }

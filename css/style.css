@@ -1,20 +1,60 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
 }
 
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../font/Shrikhand-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../font/Roboto-Bold.ttf");
+}
 /*@import "./composants/";*/
 .footer {
   background-color: #282c34;
+  position: absolute;
+  width: -moz-available;
+  padding-left: 2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: initial;
+}
+.footer__titre {
+  font-family: "Shrikhand";
+}
+.footer__liste {
+  list-style: none;
+  padding: 0;
+}
+.footer__liste-element {
+  padding: 0.25rem 0;
+}
+.footer__liste-logo {
+  height: 0.8rem;
+  width: 0.8rem;
+  padding-right: 0.5rem;
+}
+.footer__liste-texte {
+  text-decoration: none;
+  font-family: "Roboto";
+  color: white;
 }
 
 .header {
   width: auto;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .header__logo-titre {
-  width: 10rem;
+  width: 9rem;
+  padding-top: 0.5rem;
 }
 .header__logo-retour {
   width: 1rem;
@@ -26,9 +66,23 @@ body {
   align-items: center;
 }
 
-/*@import "./pages/";
+.index__recherche-ville {
+  background-color: #e1e1e1;
+  border-top: 0.2rem solid #cccc;
+  display: flex;
+  justify-content: center;
+}
+.index__texte-ville {
+  border: none;
+  background: #e1e1e1;
+  width: 6rem;
+}
+.index__logo-point-map {
+  width: 0.8rem;
+  padding: 0.8rem;
+}
 
-@import "./theme/";*/
+/*@import "./theme/";*/
 img {
   width: 2rem;
 }
