@@ -8,7 +8,7 @@
     </head>
     <body>
         <header class="header">
-            <h1>
+            <h1 class="header__titre">
                 <img src="images/logo/ohmyfood.png" alt="Logo Oh my food" class="header__logo-titre"/>
             </h1>   
         </header>
@@ -16,11 +16,14 @@
             <section>
                 <form class="index__recherche-ville">
                     <img src="images/logo/map-marker-alt-solid.svg" alt="point carte" class="index__logo-point-map"/>
-                    <input type="search" name="search" placeholder="Paris, Belleville" class="index__texte-ville">
+                    <label for="ville" class="index__label-ville">
+                        <input type="search" name="search" placeholder="Paris, Belleville" class="index__texte-ville">
+                    </label>
                 </form>
                 <article class="index__description">
                     <h2 class="index__titre-description">Réservez le menu qui vous convient</h2>
                     <p class="index__texte-description">Découvrez des restaurants d'exception, selectionnés par nos soins.</p>
+                    <a href="#" class="index__btn-description">Explorez nos restaurants</a>
                 </article>
             </section>
             <section>

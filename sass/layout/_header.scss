@@ -2,8 +2,11 @@
     width: auto;
     text-align: center;
     padding: 0.5rem;
+    &__titre{
+        margin: 0;
+    }
     &__logo-titre{
-        width: 9rem;
+        width: 10rem;
         padding-top: 0.5rem;
     }
     &__logo-retour{
