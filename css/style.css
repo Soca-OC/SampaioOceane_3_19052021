@@ -4,7 +4,7 @@ html, body {
   padding: 0;
 }
 
-h2 {
+h2, h3 {
   font-family: "Roboto-Bold";
   font-size: 1.5rem;
 }
@@ -78,6 +78,9 @@ h2 {
   align-items: center;
 }
 
+.index {
+  font-family: "Roboto";
+}
 .index__recherche-ville {
   background-color: #eaeaea;
   box-shadow: inset 0px 5px 3px -1px #C3C4C3;
@@ -105,7 +108,7 @@ h2 {
 .index__description {
   background-color: #f6f6f6;
   text-align: center;
-  height: 17.5rem;
+  height: 17rem;
 }
 .index__titre-description {
   padding: 2rem 3rem 0 3rem;
@@ -123,9 +126,49 @@ h2 {
   padding: 0.8rem 1.2rem;
   border-radius: 2rem;
   text-decoration: none;
-  font-family: "Roboto";
   font-size: 1rem;
   box-shadow: 0px 7px 8px 2px #dcdcdc;
+}
+.index__reservation-section {
+  padding: 1rem;
+}
+.index__etape-reservation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.index__etape-logo {
+  width: 1rem;
+  height: 1rem;
+  padding: 0.5rem;
+}
+.index__etape-numero {
+  background-color: #9356DC;
+  border-radius: 2rem;
+  width: 1.4rem;
+  height: 1.2rem;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding-top: 0.2em;
+  font-size: 0.8rem;
+}
+.index__etape-cadre {
+  background-color: #eaeaea;
+  box-shadow: 0px 7px 8px 2px #dcdcdc;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem -0.5rem;
+  display: flex;
+  width: -moz-available;
+  align-items: center;
+}
+.index__etape-cadre:hover {
+  background-color: #9356DC1C;
+}
+.index__etape-texte {
+  font-family: "Roboto-Bold";
+  padding: 0 1rem;
 }
 
 /*@import "./theme/";*/
