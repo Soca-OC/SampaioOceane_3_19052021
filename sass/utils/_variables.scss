@@ -1,12 +1,16 @@
 $primaire : #9356DC;
-$primaire-transparence : #9356DC1C;
+$primaire-transparence :lighten($primaire, 30%);
 $secondaire : #FF79DA;
 $terciaire : #99E2D0;
+$gradient: linear-gradient($secondaire,$primaire);
 $couleur-texte-fond-clair : black;
 $couleur-texte-fond-fonce : white;
-$couleur-fond-gris-clair: #f6f6f6;
-$couleur-fond-gris-moyen:#eaeaea;
-$couleur-fond-gris-fonce:#dcdcdc ;
+$couleur-texte-nouveau: darken($terciaire, 40%);
+$couleur-fond-gris-clair:#f0f0f0;
+$couleur-fond-gris-clair-moyen: darken($couleur-fond-gris-clair,5%);
+$couleur-fond-gris-moyen: darken($couleur-fond-gris-clair, 20%);
+$couleur-fond-gris-fonce: darken($couleur-fond-gris-clair, 10%);
+$couleur-fond-gris-tres-fonce: darken($couleur-fond-gris-clair, 40%);
 
 $titre : "Shrikhand";
 $texte : "Roboto";

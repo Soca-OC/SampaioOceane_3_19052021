@@ -1,7 +1,7 @@
 .index{
     font-family: $texte;
     &__recherche-ville{
-        background-color: $couleur-fond-gris-moyen;
+        background-color: $couleur-fond-gris-clair-moyen;
         box-shadow: inset 0px 5px 3px -1px #C3C4C3;
         display: flex;
         justify-content: center;
@@ -14,7 +14,7 @@
     }
     &__texte-ville{
         border: none;
-        background: $couleur-fond-gris-moyen;
+        background: $couleur-fond-gris-clair-moyen;
         height: 2rem;
         margin: auto 0;
         font-family: $texte-gras;
@@ -42,7 +42,7 @@
     }
     &__btn-description{
         color: $couleur-texte-fond-fonce;
-        background: linear-gradient($secondaire,$primaire);
+        background: $gradient;
         padding: .8rem 1.2rem;
         border-radius: 2rem;
         text-decoration: none;
@@ -50,8 +50,15 @@
         box-shadow: 0px 7px 8px 2px $couleur-fond-gris-fonce;
     
     }
-    &__reservation-section{
+    &__section{
         padding: 1rem;
+        &--fond{
+            background-color: $couleur-fond-gris-clair;
+        }
+        &--marge-bas{
+            margin-bottom: 2rem;
+        }
+       
     }
     &__etape-reservation{
         display: flex;
@@ -62,6 +69,7 @@
         width: 1rem;
         height: 1rem;
         padding: .5rem;
+        fill: $couleur-fond-gris-tres-fonce;
     }
     &__etape-numero{
         background-color: $primaire;
@@ -75,8 +83,8 @@
         font-size: .8rem;
     }
     &__etape-cadre{
-        background-color: $couleur-fond-gris-moyen;
-        box-shadow: 0px 7px 8px 2px $couleur-fond-gris-fonce;
+        background-color: $couleur-fond-gris-clair;
+        box-shadow: 0px 4px 10px 2px $couleur-fond-gris-fonce;
         padding: 1rem;
         border-radius: 1rem;
         margin: .5rem .5rem .5rem -.5rem;
@@ -85,10 +93,80 @@
         align-items: center;
         &:hover{
             background-color: $primaire-transparence;
+            >.index__etape-logo{
+                fill: $primaire;
+            }
         }
     }
     &__etape-texte{
         font-family: $texte-gras;
         padding: 0 1rem;
     }
+    &__restaurant{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-decoration: none;
+    }
+    &__restaurant-liste{
+        padding: .5rem 0;
+    }
+    &__restaurant-image{
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: fill-available;        
+        height: 10rem;
+        object-fit: cover;
+        grid-column: 1 / 5;
+        grid-row: 1/3;
+        border-radius: 1rem 1rem 0rem 0rem;;
+    }
+    &__restaurant-nouveaute{
+        grid-column: 4/5;
+        grid-row: 1;
+        background-color: $terciaire;
+        padding: .5rem;
+        margin: 1rem;
+        color: $couleur-texte-nouveau;
+        font-family: $texte-gras;
+        border-radius: .2rem;
+        font-size: .8rem;
+        width: min-content;
+        &--inactif{
+            display: none;
+        }
+    }
+    &__restaurant-cadre{
+        background-color: white;
+        grid-column: 1/5;
+        grid-row: 3;
+        border-radius: 0rem 0rem 1rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        color:$couleur-texte-fond-clair;
+    }
+    &__restaurant-nom{
+        grid-column: 1/4;
+        grid-row: 1;
+        margin: 1rem 0 .2rem 1rem;
+    }
+    &__restaurant-description{
+        grid-column: 1/4;
+        grid-row: 2;
+        margin: 0 0 1rem 1rem;
+        font-family: $texte-fin;
+    }
+    &__restaurant-logo-coeur{
+        grid-column: 5;
+        grid-row: 1/3;
+        width: 1.5rem;
+        margin: 1rem;
+        fill: none;
+        stroke:$couleur-texte-fond-clair;
+        stroke-width: 20;
+        &:hover{
+            fill: url(#Gradient-1);
+            stroke: none;
+        }
+    }
+    
 }
