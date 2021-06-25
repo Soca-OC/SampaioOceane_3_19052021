@@ -41,14 +41,7 @@
         
     }
     &__btn-description{
-        color: $couleur-texte-fond-fonce;
-        background: $gradient;
         padding: .8rem 1.2rem;
-        border-radius: 2rem;
-        text-decoration: none;
-        font-size: 1rem;
-        box-shadow: 0px 7px 8px 2px $couleur-fond-gris-fonce;
-    
     }
     &__section{
         padding: 1rem;
@@ -167,6 +160,5 @@
             fill: url(#Gradient-1);
             stroke: none;
         }
-    }
-    
+    }   
 }

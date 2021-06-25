@@ -1,9 +1,8 @@
 .footer{
     background-color: #282c34;
     position: absolute;
-    width: -moz-available;
-    width: -webkit-fill-available;
-    width: fill-available; 
+    width: 100%;
+    box-sizing: border-box;
     @include padding-gauche-base;
     color: $couleur-texte-fond-fonce;
     font-size: 1rem;

@@ -4,12 +4,14 @@
 @import "./base/base";
 @import "./base/typo";
 
-/*@import "./composants/";*/
+@import "./composants/animation";
+@import "./composants/btn";
 
 @import "./layout/footer";
 @import "./layout/header";
 
 @import "./pages/index";
+@import "./pages/page-menu";
 
 /*@import "./theme/";*/
 
