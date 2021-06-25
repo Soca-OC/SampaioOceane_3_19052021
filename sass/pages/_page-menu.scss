@@ -49,19 +49,23 @@
         box-shadow: 0px 4px 10px 2px $couleur-fond-gris-fonce;
         padding: .5rem;
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr) auto;
         margin: 1rem 0;
-        animation: 1s;
         &:hover
             >.page-menu__plat-validation{
-                grid-column: 5;
-                grid-row: 1/3;
-                width: 4rem;
-                background: aquamarine;
-                margin: -0.5rem;
-                border-radius: 0 1rem 1rem 0;
-                transition: transform 330ms ease-in-out;
+                width: 50px;
+                transform-origin: right;
+                transform: scaleX(1);
+                transition: transform 500ms;
+                display: block;
             }
+    }
+    &__plat-validation{
+        grid-column: 5;
+        grid-row: 1/3;
+        background: aquamarine;
+        transform: scaleX(0);
+        border-radius: 0 1rem 1rem 0;
     }
     &__plat-nom{
         padding: .2rem;

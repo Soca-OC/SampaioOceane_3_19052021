@@ -304,18 +304,22 @@ h2, h3 {
   box-shadow: 0px 4px 10px 2px #d7d7d7;
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr) auto;
   margin: 1rem 0;
-  animation: 1s;
 }
 .page-menu__plat-cadre:hover > .page-menu__plat-validation {
+  width: 50px;
+  transform-origin: right;
+  transform: scaleX(1);
+  transition: transform 500ms;
+  display: block;
+}
+.page-menu__plat-validation {
   grid-column: 5;
   grid-row: 1/3;
-  width: 4rem;
   background: aquamarine;
-  margin: -0.5rem;
+  transform: scaleX(0);
   border-radius: 0 1rem 1rem 0;
-  transition: transform 330ms ease-in-out;
 }
 .page-menu__plat-nom {
   padding: 0.2rem;
