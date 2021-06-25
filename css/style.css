@@ -304,25 +304,32 @@ h2, h3 {
   box-shadow: 0px 4px 10px 2px #d7d7d7;
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto auto auto 3rem;
   margin: 1rem 0;
+  overflow: hidden;
 }
 .page-menu__plat-cadre:hover > .page-menu__plat-validation {
-  width: 50px;
   transform-origin: right;
-  transform: scaleX(1);
-  transition: transform 500ms;
+  transform: translate(-4rem);
+  transition: transform 1000ms;
   display: block;
+  margin: -0.5rem;
 }
-.page-menu__plat-cadre > .page-menu__plat-prix {
-  translate: 1000ms;
+.page-menu__plat-cadre:hover > .page-menu__plat-prix {
+  transform: translate(-4rem);
+  transition: transform 1000ms;
+}
+.page-menu__logo-valide {
+  width: 1rem;
+  height: 1rem;
 }
 .page-menu__plat-validation {
   grid-column: 4;
   grid-row: 1/3;
   background: aquamarine;
-  transform: scaleX(0);
   border-radius: 0 1rem 1rem 0;
+  left: 4rem;
+  position: relative;
 }
 .page-menu__plat-nom {
   padding: 0.2rem;
@@ -345,7 +352,7 @@ h2, h3 {
 .page-menu__plat-prix {
   font-family: "Roboto-Bold";
   font-size: 0.8rem;
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 2;
   align-self: center;
   justify-self: center;
