@@ -10,6 +10,7 @@
             order: 2;
             background: $couleur-fond-gris-clair;
             box-shadow: none;
+            padding-bottom: 3rem;
         }
     }
     &__label-ville{
@@ -27,7 +28,6 @@
         @media screen and (min-width: 1024px) {
             background: transparent;
             color: $primaire-fonce;
-            padding-bottom: 3rem;
         }
     }
     &__logo-point-map{
@@ -65,7 +65,11 @@
         &--marge-bas{
             margin-bottom: 2rem;
         }
-        &--flex{
+        &--grille{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--colonne{
             display: flex;
             flex-direction: column;
         }  
@@ -74,6 +78,11 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        @media screen and (min-width:1024px) {
+            margin: auto;
+            justify-content: center;
+            flex-direction: column;
+        }
     }
     &__etape-logo{
         width: 1rem;
@@ -91,6 +100,12 @@
         z-index: 1;
         padding-top: .2em;
         font-size: .8rem;
+        @media screen and (min-width:1024px) {
+            margin: 1rem auto -1rem auto;
+            width: 3rem;
+            height: 2rem;
+            padding-top: 1rem;
+        }
     }
     &__etape-cadre{
         background-color: $couleur-fond-gris-clair;
@@ -101,6 +116,13 @@
         display: flex;
         width: -moz-available;
         align-items: center;
+        @media screen and (min-width: 1024px){
+            width: 35rem;
+            margin: auto;
+            height: 3rem;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
         &:hover{
             background-color: $primaire-transparence;
             >.index__etape-logo{
@@ -119,6 +141,9 @@
     }
     &__restaurant-liste{
         padding: .5rem 0;
+        @media screen and (min-width:1024px) {
+            width: 30%;
+        }
     }
     &__restaurant-image{
         width: -moz-available;
