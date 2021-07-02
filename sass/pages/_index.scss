@@ -6,6 +6,11 @@
         display: flex;
         justify-content: center;
         padding: .3rem;
+        @media screen and (min-width: 1024px) {
+            order: 2;
+            background: $couleur-fond-gris-clair;
+            box-shadow: none;
+        }
     }
     &__label-ville{
         height: 2rem;
@@ -19,6 +24,11 @@
         margin: auto 0;
         font-family: $texte-gras;
         font-size: .9rem;
+        @media screen and (min-width: 1024px) {
+            background: transparent;
+            color: $primaire-fonce;
+            padding-bottom: 3rem;
+        }
     }
     &__logo-point-map{
         width:.8rem;
@@ -28,6 +38,10 @@
         background-color: $couleur-fond-gris-clair;
         text-align: center;
         height: 17rem;
+        @media screen and (min-width: 1024px) {
+            height: 11.5rem;
+            padding-top: 2rem;
+        }
     }
     &__titre-description{
         padding: 2rem 3rem 0 3rem;;
@@ -51,7 +65,10 @@
         &--marge-bas{
             margin-bottom: 2rem;
         }
-       
+        &--flex{
+            display: flex;
+            flex-direction: column;
+        }  
     }
     &__etape-reservation{
         display: flex;

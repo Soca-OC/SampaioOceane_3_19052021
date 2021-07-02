@@ -1,5 +1,6 @@
 $primaire : #9356DC;
 $primaire-transparence :lighten($primaire, 30%);
+$primaire-fonce: darken($primaire, 30%);
 $secondaire : #FF79DA;
 $terciaire : #99E2D0;
 $gradient: linear-gradient($secondaire,$primaire);
