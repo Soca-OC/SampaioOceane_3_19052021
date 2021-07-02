@@ -18,4 +18,13 @@
         text-align: left;
         align-items: center;
     }
+    /*Desktop*/
+    @media screen and (min-width: 1024px){
+        text-align: left;
+        margin-left: 1rem;
+    }
+    /*Tablette*/ 
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+       
+    }
 }

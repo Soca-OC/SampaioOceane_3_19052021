@@ -28,6 +28,18 @@ h2, h3 {
   font-family: "Roboto-Light";
   src: url("../font/Roboto-Light.ttf");
 }
+.case-plat {
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .btn-degrade {
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -72,6 +84,8 @@ h2, h3 {
   width: auto;
   text-align: center;
   padding: 0.5rem;
+  /*Desktop*/
+  /*Tablette*/
 }
 .header__titre {
   margin: 0;
@@ -89,7 +103,12 @@ h2, h3 {
   text-align: left;
   align-items: center;
 }
-
+@media screen and (min-width: 1024px) {
+  .header {
+    text-align: left;
+    margin-left: 1rem;
+  }
+}
 .index {
   font-family: "Roboto";
 }
@@ -310,26 +329,36 @@ h2, h3 {
 }
 .page-menu__plat-cadre:hover > .page-menu__plat-validation {
   transform-origin: right;
-  transform: translate(-4rem);
-  transition: transform 1000ms;
   display: block;
   margin: -0.5rem;
+  transform: translate(-4rem);
+}
+.page-menu__plat-cadre:hover > .page-menu__plat-validation > .page-menu__logo-valide {
+  transform: rotate(1turn);
+  transition: transform 500ms ease-in-out;
 }
 .page-menu__plat-cadre:hover > .page-menu__plat-prix {
   transform: translate(-4rem);
-  transition: transform 1000ms;
+}
+.page-menu__plat-cadre:hover > .page-menu__plat-texte {
+  width: 12rem;
 }
 .page-menu__logo-valide {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 4rem;
+  color: white;
+  display: block;
+  margin: auto;
 }
 .page-menu__plat-validation {
   grid-column: 4;
   grid-row: 1/3;
-  background: aquamarine;
+  background: #99E2D0;
   border-radius: 0 1rem 1rem 0;
   left: 4rem;
   position: relative;
+  transition: transform 1000ms;
+  margin: -0.5rem;
 }
 .page-menu__plat-nom {
   padding: 0.2rem;
@@ -348,6 +377,8 @@ h2, h3 {
   overflow: hidden;
   width: 14rem;
   white-space: nowrap;
+  transition-property: width;
+  transition-duration: 1000ms;
 }
 .page-menu__plat-prix {
   font-family: "Roboto-Bold";
@@ -356,6 +387,8 @@ h2, h3 {
   grid-row: 2;
   align-self: center;
   justify-self: center;
+  transition-property: transform;
+  transition-duration: 1000ms;
 }
 .page-menu__section-commande {
   display: flex;
