@@ -7,15 +7,37 @@
     color: $couleur-texte-fond-fonce;
     font-size: 1rem;
     font-weight: initial;
+    @media screen and (min-width:768px) {
+        padding: 0;
+    }
     &__titre{
         font-family: $titre;
+        @media screen and (min-width:768px) {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        @media screen and (min-width:1024px) {
+            text-align: center;
+            margin: 2rem 0 0 1rem;
+        }
     }
     &__liste{
         list-style: none;
         padding: 0;
+        @media screen and (min-width:768px) {
+            display: inline-flex;
+            width: 100%;
+            justify-content: center;
+        }
     }
     &__liste-element{
         padding: .25rem 0;
+        @media screen and (min-width:768px) {
+            margin: 0 1rem;
+        }
+        @media screen and (min-width:1024px) {
+            margin: 0 5rem;
+        }
     }
     &__liste-logo{
         height: 0.8rem;

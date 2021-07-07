@@ -16,10 +16,19 @@
         align-items: center;
         justify-content: space-around;
         padding: .5rem 0;
+        @media screen and (min-width:768px) {
+            justify-content: center;
+        }
     }
     &__nom-restaurant{
         font-family: $titre;
         font-size: 1.5rem;
+        @media screen and (min-width:768px) {
+            margin: 2rem;
+        }
+        @media screen and (min-width:1024px) {
+            font-size: 2rem;
+        }
 
     }
     &__logo-coeur{
@@ -28,7 +37,8 @@
         fill: none;
         stroke-width: 20;
         &:hover{
-            fill: url(#Gradient-1);
+            fill:url(#Gradient-1);
+            animation:  hover-coeur 1.5s;
             stroke: none; 
         }
     }
@@ -42,6 +52,12 @@
         border-bottom: $terciaire solid 3px;
         width: 3rem;
         padding: .2rem 0;
+        @media screen and (min-width:1024px) {
+            font-size: 1.5rem;
+            width: 20rem;
+            text-align: center;
+            margin: 3rem auto;
+        }
     }
     &__plat-cadre{
         background: $couleur-texte-fond-fonce;
@@ -69,6 +85,10 @@
             >.page-menu__plat-texte{
                 width: 12rem;
             }
+        }
+        @media screen and (min-width:1024px) {
+            width: 35rem;
+            margin: 1rem auto;
         }
     }
     &__logo-valide{

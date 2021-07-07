@@ -2,19 +2,24 @@
     width: auto;
     text-align: center;
     padding: 0.5rem;
+
     &__titre{
         margin: 0;
     }
     &__logo-titre{
         width: 10rem;
         padding-top: 0.5rem;
+        margin: auto;
+        @media screen and (min-width:1024px) {
+            padding: 0;
+        }
     }
     &__logo-retour{
         width: 1rem;
     }
     &--grid{
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: auto 3fr;
         text-align: left;
         align-items: center;
     }
@@ -22,6 +27,7 @@
     @media screen and (min-width: 1024px){
         text-align: left;
         margin-left: 1rem;
+        padding-top: 1rem;
     }
     /*Tablette*/ 
     @media screen and (min-width: 768px) and (max-width: 1023px) {

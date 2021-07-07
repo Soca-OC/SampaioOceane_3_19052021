@@ -38,6 +38,9 @@
         background-color: $couleur-fond-gris-clair;
         text-align: center;
         height: 17rem;
+        @media screen and (min-width:768px) {
+            height: 13rem;
+        }
         @media screen and (min-width: 1024px) {
             height: 11.5rem;
             padding-top: 2rem;
@@ -66,21 +69,41 @@
             margin-bottom: 2rem;
         }
         &--grille{
-            display: flex;
-            flex-wrap: wrap;
+            @media screen and (min-width:768px) {
+            display: grid;
+            grid-template-areas: "a a"
+                                 ". . ";
+            grid-template-columns: repeat(2,1fr);
+            }
+            @media screen and (min-width:1024px) {
+            grid-template-areas: "a a a"
+                                 ". . ."
+                                 ". . ." ;
+            grid-template-columns: repeat(3,1fr);
+           }
         }
         &--colonne{
             display: flex;
             flex-direction: column;
-        }  
+        }
+        >h3{
+            @media  screen and (min-width:1024px) {
+                grid-area: a;
+            }
+            grid-area: a;
+        } 
     }
     &__etape-reservation{
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        justify-content:center;
+        align-items: center
+        ;
+        @media screen and (min-width: 760px){
+            margin: auto;
+            flex-direction: column;
+        }
         @media screen and (min-width:1024px) {
             margin: auto;
-            justify-content: center;
             flex-direction: column;
         }
     }
@@ -100,8 +123,10 @@
         z-index: 1;
         padding-top: .2em;
         font-size: .8rem;
-        @media screen and (min-width:1024px) {
+        @media screen and (min-width:768px){
             margin: 1rem auto -1rem auto;
+        }
+        @media screen and (min-width:1024px) {
             width: 3rem;
             height: 2rem;
             padding-top: 1rem;
@@ -114,7 +139,7 @@
         border-radius: 1rem;
         margin: .5rem .5rem .5rem -.5rem;
         display: flex;
-        width: -moz-available;
+        width: 20rem;
         align-items: center;
         @media screen and (min-width: 1024px){
             width: 35rem;
@@ -135,14 +160,33 @@
         padding: 0 1rem;
     }
     &__restaurant{
+        grid-column: 4/5;
+        grid-row: 1;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         text-decoration: none;
+
+        &--new{
+            &::before{
+                content: "Nouveau";
+                grid-column: 4/5;
+                grid-row: 1;
+                background-color: $terciaire;
+                padding: .5rem;
+                margin: 1rem;
+                color: $couleur-texte-nouveau;
+                font-family: $texte-gras;
+                border-radius: .2rem;
+                font-size: .8rem;
+                width: min-content;
+                z-index: 1;
+            }
+        }
     }
     &__restaurant-liste{
         padding: .5rem 0;
-        @media screen and (min-width:1024px) {
-            width: 30%;
+        @media screen and (min-width:768px) {
+            margin: 10px;
         }
     }
     &__restaurant-image{
@@ -154,21 +198,6 @@
         grid-column: 1 / 5;
         grid-row: 1/3;
         border-radius: 1rem 1rem 0rem 0rem;;
-    }
-    &__restaurant-nouveaute{
-        grid-column: 4/5;
-        grid-row: 1;
-        background-color: $terciaire;
-        padding: .5rem;
-        margin: 1rem;
-        color: $couleur-texte-nouveau;
-        font-family: $texte-gras;
-        border-radius: .2rem;
-        font-size: .8rem;
-        width: min-content;
-        &--inactif{
-            display: none;
-        }
     }
     &__restaurant-cadre{
         background-color: white;
@@ -199,8 +228,8 @@
         stroke:$couleur-texte-fond-clair;
         stroke-width: 20;
         &:hover{
-            fill: url(#Gradient-1);
-            stroke: none;
+            fill:url(#Gradient-1);
+            animation:  hover-coeur 1.5s;
         }
     }   
 }
