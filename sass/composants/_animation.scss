@@ -23,3 +23,79 @@
         opacity: 1;
     }
 }
+.loader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: loading 2s backwards;
+    animation-iteration-count: 0;
+    transform: scale(1);
+
+    @keyframes loading {
+        0%{
+            transform: scale(1);
+        }
+        100%{
+           transform: scale(0);
+
+        }
+        
+    }
+    &__fumee{
+        display: flex;
+        flex-direction: row;
+        &--droite{
+            position: relative;
+            left: -1rem;
+        }
+        &--gauche{
+            position: relative;
+            left: 1.5rem;
+            padding: 1rem;
+        }
+        &--decale{
+            left: -1rem;
+            position: relative;
+        }   
+    }
+    &__fumee-1 {
+        width: 50px;
+        height: 50px;
+        border: 5px solid transparent;
+            border-top-color: transparent;
+            border-top-style: solid;
+            border-top-width: 10px;
+        border-top-color: transparent;
+        border-top-style: solid;
+        border-top-width: 10px;
+        border-top: 5px solid #17F;
+        border-radius: 50%;
+        animation: spin 2s linear infinite;
+        bottom: -2rem;
+        position: relative;
+        
+        @keyframes spin {
+            0% { transform: rotate(100deg);}
+            100% { transform: rotate(80deg);}
+        }       
+    }
+    &__fumee-3 {
+        width: 50px;
+        height: 50px;
+        border: 5px solid transparent;
+            border-top-color: transparent;
+            border-top-style: solid;
+            border-top-width: 10px;
+        border-top: 5px solid #1177FF;
+        border-radius: 50%;
+        animation: spin-inverse 2s linear infinite;
+        @keyframes spin-inverse {
+            0% { transform: rotate(-100deg);}
+            100% { transform: rotate(-80deg);}
+        }
+    }
+    &__cloche{
+        width:100px;
+        margin: auto;
+    }
+}

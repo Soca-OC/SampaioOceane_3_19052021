@@ -1,9 +1,12 @@
 $primaire : #9356DC;
 $primaire-transparence :lighten($primaire, 30%);
+$primaire-clair:lighten($primaire,5%);
 $primaire-fonce: darken($primaire, 30%);
 $secondaire : #FF79DA;
+$secondaire-clair:lighten($secondaire,5%);
 $terciaire : #99E2D0;
 $gradient: linear-gradient($secondaire,$primaire);
+$gradient-clair:linear-gradient($secondaire-clair,$primaire-clair);
 $couleur-texte-fond-clair : black;
 $couleur-texte-fond-fonce : white;
 $couleur-texte-nouveau: darken($terciaire, 40%);
