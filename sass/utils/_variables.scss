@@ -6,6 +6,7 @@ $secondaire : #FF79DA;
 $secondaire-clair:lighten($secondaire,5%);
 $terciaire : #99E2D0;
 $gradient: linear-gradient($secondaire,$primaire);
+$gradient-seconde-terciaire: linear-gradient($terciaire,$secondaire);
 $gradient-clair:linear-gradient($secondaire-clair,$primaire-clair);
 $couleur-texte-fond-clair : black;
 $couleur-texte-fond-fonce : white;

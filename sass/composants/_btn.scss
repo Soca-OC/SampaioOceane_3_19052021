@@ -8,5 +8,6 @@
     &:hover{
         background: $gradient-clair;
         box-shadow: 0px 7px 8px 2px $couleur-fond-gris-tres-fonce;
+        transition: 1s;
     }
 }

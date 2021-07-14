@@ -24,19 +24,32 @@
     }
 }
 .loader{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: loading 2s backwards;
-    animation-iteration-count: 0;
-    transform: scale(1);
-
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: loading 3.5s forwards;
+    padding-top: 6rem;
     @keyframes loading {
         0%{
-            transform: scale(1);
+            opacity: 1;
+            z-index: 10;
+        }
+        60%{
+            opacity: 1;
+        }
+        70%{
+            opacity: .75;
+        }
+        80%{
+            opacity: .50;
+        }
+        90%{
+            opacity: .25;
         }
         100%{
-           transform: scale(0);
+            opacity: 0;
+            z-index: 0;
 
         }
         
@@ -44,9 +57,11 @@
     &__fumee{
         display: flex;
         flex-direction: row;
+        justify-content: center;
         &--droite{
             position: relative;
             left: -1rem;
+           
         }
         &--gauche{
             position: relative;
@@ -68,7 +83,7 @@
         border-top-color: transparent;
         border-top-style: solid;
         border-top-width: 10px;
-        border-top: 5px solid #17F;
+        border-top: 5px solid $secondaire;
         border-radius: 50%;
         animation: spin 2s linear infinite;
         bottom: -2rem;
@@ -86,7 +101,7 @@
             border-top-color: transparent;
             border-top-style: solid;
             border-top-width: 10px;
-        border-top: 5px solid #1177FF;
+        border-top: 5px solid $secondaire-clair;
         border-radius: 50%;
         animation: spin-inverse 2s linear infinite;
         @keyframes spin-inverse {
@@ -97,5 +112,7 @@
     &__cloche{
         width:100px;
         margin: auto;
+        display: block;
+        fill: $primaire;
     }
 }
