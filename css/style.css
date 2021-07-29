@@ -22,6 +22,10 @@ main {
   position: relative;
 }
 
+main, footer, header {
+  z-index: 2;
+}
+
 @font-face {
   font-family: "Shrikhand";
   src: url("../font/Shrikhand-Regular.ttf");
@@ -120,6 +124,7 @@ main {
   }
   95% {
     opacity: 0.25;
+    z-index: 10;
   }
   100% {
     z-index: 1;

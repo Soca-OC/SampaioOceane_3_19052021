@@ -17,5 +17,8 @@ h2,h3{
 main{
     position: relative;
 }
+main, footer, header{
+    z-index:2;
+}
 
 
